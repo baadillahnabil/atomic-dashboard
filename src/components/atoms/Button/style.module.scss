@@ -1,0 +1,71 @@
+@import "/src/theme/colors";
+
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // colors
+  &--primary {
+    background-color: $primary;
+    color: $white;
+    &:hover {
+      background-color: $primary-hover;
+    }
+    &:active {
+      background-color: $primary-active;
+    }
+  }
+  &--secondary {
+    background-color: $secondary;
+    color: $white;
+    &:hover {
+      background-color: $secondary-hover;
+    }
+    &:active {
+      background-color: $secondary-active;
+    }
+  }
+  &--plain {
+    background-color: $white;
+    color: $text-primary;
+    &:hover {
+      background-color: $white-hover;
+    }
+    &:active {
+      background-color: $white-active;
+    }
+  }
+  &--none {
+    background-color: transparent;
+    color: $text-primary;
+  }
+
+  // variants
+  &--icon {
+    padding: 10px;
+  }
+  &--text {
+    padding: 10px 20px;
+  }
+
+  // border
+  &--circle {
+    border-radius: 24px;
+  }
+  &--rounded {
+    border-radius: 8px;
+  }
+  &--square {
+    border-radius: 0;
+  }
+
+  // width
+  &--full {
+    width: 100%;
+  }
+}
