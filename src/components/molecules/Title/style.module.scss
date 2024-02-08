@@ -1,0 +1,18 @@
+@import "/src/theme/colors";
+
+.title {
+  color: $text-primary;
+
+  &--gap-none {
+    margin-bottom: 0;
+  }
+  &--gap-small {
+    margin-bottom: 8px;
+  }
+  &--gap-medium {
+    margin-bottom: 16px;
+  }
+  &--gap-large {
+    margin-bottom: 24px;
+  }
+}
