@@ -1,0 +1,42 @@
+@import "/src/theme/colors";
+
+.typography {
+  color: $text-primary;
+
+  // Sizes
+  &--title {
+    font-size: 26px;
+  }
+  &--subtitle {
+    font-size: 16px;
+  }
+  &--section-title {
+    font-size: 22px;
+  }
+  &--card-title {
+    font-size: 20px;
+  }
+  &--large {
+    font-size: 24px;
+  }
+  &--medium {
+    font-size: 18px;
+  }
+  &--p {
+    font-size: 14px;
+  }
+  &--small {
+    font-size: 12px;
+  }
+
+  // Weights
+  &--bold {
+    font-weight: 700;
+  }
+  &--regular {
+    font-weight: 400;
+  }
+  &--light {
+    font-weight: 100;
+  }
+}
