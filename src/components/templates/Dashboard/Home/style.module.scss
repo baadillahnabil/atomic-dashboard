@@ -1,0 +1,17 @@
+@import "/src/theme/colors";
+
+.home {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  height: 100vh;
+}
+
+.body {
+  padding: 30px;
+}
+
+.rightSidebar {
+  background-color: $white;
+  padding: 30px;
+}
