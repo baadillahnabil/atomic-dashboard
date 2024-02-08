@@ -1,0 +1,9 @@
+@import "/src/theme/colors";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
