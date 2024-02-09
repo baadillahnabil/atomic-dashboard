@@ -6,6 +6,7 @@
     "paths": {
       "@/*": ["*"],
       "src/*": ["src/*"],
+      "assets/*": ["src/assets/*"],
       "atoms/*": ["src/components/atoms/*"],
       "molecules/*": ["src/components/molecules/*"],
       "organisms/*": ["src/components/organisms/*"],
