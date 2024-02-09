@@ -1,0 +1,30 @@
+@import "/src/theme/colors";
+
+.cardHeader {
+  display: flex;
+  padding-bottom: 24px;
+
+  // alignment
+  &--left {
+    justify-content: flex-start;
+  }
+  &--center {
+    justify-content: center;
+  }
+  &--right {
+    justify-content: flex-end;
+  }
+  &--space-between {
+    justify-content: space-between;
+  }
+
+  // spacing
+  &--compact {
+    padding-bottom: 4px;
+  }
+
+  // sizing
+  &--fullWidth {
+    width: 100%;
+  }
+}

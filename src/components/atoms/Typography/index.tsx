@@ -14,23 +14,29 @@ export interface TypographyProps {
     | "medium"
     | "small"
     | "p";
-  weight?: "light" | "regular" | "bold";
+  weight?: "light" | "regular" | "medium" | "bold";
+  gap?: "none" | "small" | "medium" | "large";
+  color?: "primary" | "secondary" | "greyed";
   className?: string;
 }
 
 const Typography: FC<PropsWithChildren<TypographyProps>> = ({
   children,
+  className,
   variant,
   size = "p",
   weight = "regular",
-  className,
+  gap = "none",
+  color = "primary",
   ...props
 }) => {
   const Component = variant;
   const classes = clsx(
     styles.typography,
     styles[`typography--${size}`],
-    styles[`typography--${weight}`],
+    styles[`typography--weight-${weight}`],
+    styles[`typography--gap-${gap}`],
+    styles[`typography--color-${color}`],
     className
   );
 
