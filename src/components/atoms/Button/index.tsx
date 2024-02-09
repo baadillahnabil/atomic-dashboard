@@ -9,6 +9,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "icon" | "text";
   border?: "circle" | "rounded" | "square";
   fullWidth?: boolean;
+  compact?: boolean;
 }
 
 const Button: FC<PropsWithChildren<ButtonProps>> = ({
@@ -18,6 +19,7 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
   variant = "text",
   border = "rounded",
   fullWidth = false,
+  compact = false,
   ...props
 }) => {
   const classes = clsx(
@@ -26,6 +28,7 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
     styles[`button--${color}`],
     styles[`button--${border}`],
     fullWidth && styles["button--full"],
+    compact && styles["button--compact"],
     className
   );
 
