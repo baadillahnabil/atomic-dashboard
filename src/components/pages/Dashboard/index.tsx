@@ -1,6 +1,10 @@
 import Avatar from "atoms/Avatar";
 import Button from "atoms/Button";
 import Icon from "atoms/Icons";
+import Typography from "atoms/Typography";
+import Box from "atoms/Box";
+import Divider from "atoms/Divider";
+import Progress from "atoms/Progress";
 
 import HomeIcon from "atoms/Icons/Home";
 import BellIcon from "atoms/Icons/Bell";
@@ -15,6 +19,7 @@ import ButtonGroup from "molecules/ButtonGroup";
 
 import Header from "organisms/Header";
 import Sidebar from "organisms/Sidebar";
+import Card from "@/src/components/molecules/Card";
 
 import DashboardMainTemplate from "templates/Dashboard/Main";
 import DashboardHomeTemplate from "templates/Dashboard/Home";
@@ -68,7 +73,56 @@ function Dashboard() {
           </Sidebar>
         }
       >
-        <DashboardHomeTemplate sidebar={<p>this is right sidebar</p>}>
+        <DashboardHomeTemplate
+          sidebar={
+            <Card
+              rounded
+              bordered
+              header={
+                <Typography variant="h3" size="medium" weight="medium">
+                  Expenses and income
+                </Typography>
+              }
+              footer={<Progress value={75} />}
+            >
+              <Box justify="space-between" align="center">
+                <Box direction="column">
+                  <Typography variant="p" size="p" weight="medium" gap="small">
+                    Expenses
+                  </Typography>
+                  <Typography variant="p" size="large" weight="medium">
+                    75%
+                  </Typography>
+                  <Typography
+                    variant="p"
+                    size="small"
+                    weight="medium"
+                    color="greyed"
+                  >
+                    5.653
+                  </Typography>
+                </Box>
+                <Divider orientation="vertical" text="vs" />
+                <Box direction="column" align="end">
+                  <Typography variant="p" size="p" weight="medium" gap="small">
+                    Income
+                  </Typography>
+                  <Typography variant="p" size="large" weight="medium">
+                    40%
+                  </Typography>
+                  <Typography
+                    variant="p"
+                    size="small"
+                    weight="medium"
+                    color="greyed"
+                  >
+                    2.656
+                  </Typography>
+                </Box>
+              </Box>
+            </Card>
+          }
+        >
           <Header
             title={{
               text: "Hello, Jhon .D",
