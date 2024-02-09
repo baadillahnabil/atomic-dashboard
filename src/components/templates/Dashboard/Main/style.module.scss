@@ -3,7 +3,7 @@
 .dashboard {
   background-color: $background-primary;
   display: grid;
-  grid-template-columns: 6% 94%;
+  grid-template-columns: 1fr 25fr;
   height: 100vh;
 }
 
